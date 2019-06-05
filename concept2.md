@@ -36,6 +36,7 @@ if(条件式) 文;
 ```
 
 - サンプルコード
+
 ```js
 if (true) console.log("true"); // true
 ```
@@ -46,6 +47,7 @@ let obj = {
   num: 1,
   name: 'ocean',
 }
+
 if (obj.num <= 10) {
   if (obj.name === 'ocean') {
     console.log('値は10以下で、名前は"ocean"です。'); // ここが出力される
@@ -53,7 +55,10 @@ if (obj.num <= 10) {
 }
 ```
 
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/7uerqf30/2/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 ## else文
+
 **_if文_**は条件式が真となる場合にのみ処理を実行する制御文でした。`else if`および`else`を使うことで条件式を評価した結果が偽(`false`)となる場合に、さらなる条件分岐ができるようになります。
 
 ![Flowchart else](./images/flow-elseif.png)
@@ -121,3 +126,5 @@ if (population < 100000) {
 ```
 "Big City"
 ```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/qe7fau9h/2/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>

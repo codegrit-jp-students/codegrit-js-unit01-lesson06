@@ -42,6 +42,9 @@ switch (weather) {
 ```js
 "晴れです"
 ```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/gdwb3cup/3/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 このように変数と一致する値があれば、そのcaseに記述された処理が実行されます。
 各`case`に続く文章の末尾に`break`が記述されていることに注目してください。**_switch文_**ではこの`break`を記述しておかないとそれ以降のcase内の文も実行してしまいます。
 
@@ -65,6 +68,8 @@ switch (color) {
 "赤です"
 "黄色です"
 ```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/gdwb3cup/4/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 上記の構文ではどの値も評価元の値と一致しない場合は、何も実行されずswitchのブロックを抜けます。もし**_if文_**の`else`の場合のように何も該当しない場合の処理を記載する場合は次のように`default`を記述しておきます。
 
@@ -101,33 +106,39 @@ switch (color) {
     console.log('該当する色がありません');
 }
 ```
+
 出力結果:
 ```js
 //コンソールの出力結果
 "該当する色がありません"
 ```
 
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/udybgakz/5/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
+
 ### 連続したcaseがある場合のswich文
 
 先ほども述べたように**_switch文_**は`break`をつけない場合は、それ以降のcase内の文も実行します。この仕組みを使って複数の値に対して一つの結果を返す**_swicth文_**を書くことができます。下記の例では、例えば最初の3つの`case`でラベル付された値に該当した場合、どの場合も同じ処理文が実行されます。
 ```js
 let bestAnimal = "Lion";
+let species;
 
 switch (bestAnimal) {
   case 'Cat':
   case 'Lion':
   case 'Fox':
-    bestAnimal = 'Mammal'; // 'Cat'、'Lion'、'Fox'の場合
+    species = 'Mammal'; // 'Cat'、'Lion'、'Fox'の場合
     break;
   case 'Duck':
-    bestAnimal = "Bird";
+    species = "Bird";
     break;
   default:
-    bestAnimal = 'Nothing';
+    species = 'Nothing';
 }
 
-console.log(bestAnimal); // "Mammal"
+console.log(species); // "Mammal"
 ```
+
+<iframe width="100%" height="300" src="//jsfiddle.net/codegrit_hiro/dunw7a1q/1/embedded/js,html,css,result/dark/" allowfullscreen="allowfullscreen" allowpaymentrequest frameborder="0"></iframe>
 
 ## 更に学ぼう
 
